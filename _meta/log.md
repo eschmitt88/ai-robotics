@@ -14,3 +14,5 @@ skills; read by `/lint`.
 2026-07-01 15:50 promote-moc imitation-and-diffusion-policies (15 concepts)
 2026-07-01 15:50 promote-moc vision-language-action-models (7 concepts)
 2026-07-01 15:50 promote-moc simulation-and-sim-to-real (8 concepts)
+2026-07-01 15:55 propose sac-vs-ppo-halfcheetah
+2026-07-01 15:55 propose diffusion-policy-pusht
