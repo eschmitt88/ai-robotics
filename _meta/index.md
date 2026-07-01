@@ -10,14 +10,10 @@ and `/new-experiment`.
 
 ## Maps of Content
 
-(promote a cluster of ≥5 related concepts into `mocs/<theme>.md`)
-
-Four ripe clusters already exist in `concepts/` (each ≥7 notes), ready to
-promote:
-- **Reinforcement learning** — 13 concepts ([[Soft Actor-Critic]], [[Proximal Policy Optimization]], …)
-- **Imitation learning & diffusion policies** — 15 concepts ([[Diffusion Policy]], [[Action Chunking]], …)
-- **Vision-language-action models** — 7 concepts ([[Vision-Language-Action Model]], …)
-- **Simulation & sim-to-real** — 8 concepts ([[GPU-Parallelized Simulation]], [[Sim-to-Real Transfer]], …)
+- [[mocs/reinforcement-learning]] — Reinforcement Learning for Control (13 concepts)
+- [[mocs/imitation-and-diffusion-policies]] — Imitation Learning & Diffusion Policies (15 concepts)
+- [[mocs/vision-language-action-models]] — Vision-Language-Action Models (7 concepts)
+- [[mocs/simulation-and-sim-to-real]] — Simulation & Sim-to-Real (8 concepts)
 
 ## Active experiments
 
