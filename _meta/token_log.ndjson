@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-07-01T15:21:55Z",
+  "session_id": "7410ca08-9be1-43e5-aea5-42f66f677e30",
+  "input_tokens": 28514,
+  "output_tokens": 24004,
+  "cache_read_tokens": 1356523,
+  "cache_creation_tokens": 99085,
+  "tools_used_summary": {
+    "Skill": 3,
+    "Bash": 6,
+    "Edit": 4,
+    "Write": 2,
+    "Read": 2,
+    "Agent": 1
+  }
+}
