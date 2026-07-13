@@ -16,3 +16,4 @@ skills; read by `/lint`.
 2026-07-01 15:50 promote-moc simulation-and-sim-to-real (8 concepts)
 2026-07-01 15:55 propose sac-vs-ppo-halfcheetah
 2026-07-01 15:55 propose diffusion-policy-pusht
+2026-07-02 16:09 session_end session=7410ca08-9be1-43e5-aea5-42f66f677e30
