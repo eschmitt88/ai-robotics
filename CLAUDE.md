@@ -9,7 +9,7 @@ Learning-based robotics / embodied AI, studied simulation-first on one 16 GB
 GPU. Scope: continuous-control RL, imitation & behavior cloning, diffusion/flow
 policies, and vision-language-action (VLA) foundation models — plus the
 sim-to-real gap. The goal is understanding *and* hands-on reproduction, not a
-single benchmark score. `agency: max` — see `~/.claude/rules/agency.md`.
+single benchmark score. `agency: max` — see `~/claude-system/claude/rules/agency.md`.
 
 ## Layout (see user CLAUDE.md for the full rationale)
 
