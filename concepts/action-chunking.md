@@ -3,7 +3,7 @@ kind: concept
 name: "Action Chunking"
 status: seedling
 added: "2026-07-01"
-sources: [chi2023diffusion, zhao2023learning]
+sources: [black2024pi0, chi2023diffusion, ghosh2024octo, prasad2024consistency, zhao2023learning]
 related_concepts: [Compounding Error, Temporal Ensembling, Receding Horizon Control, Diffusion Policy, Behavior Cloning]
 related_experiments: []
 tags: [imitation, action-space, temporal]

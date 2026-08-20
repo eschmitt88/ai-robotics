@@ -3,7 +3,7 @@ kind: concept
 name: "Manipulation Benchmark"
 status: seedling
 added: "2026-07-01"
-sources: [tao2024maniskill3]
+sources: [tao2024maniskill3, zakka2025mujoco]
 related_concepts: ["GPU-Parallelized Simulation", "Heterogeneous Simulation", "Sim-to-Real Transfer", "Imitation Learning", "Reinforcement Learning"]
 related_experiments: []
 tags: [benchmark, manipulation, evaluation]

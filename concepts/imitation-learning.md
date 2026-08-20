@@ -3,7 +3,7 @@ kind: concept
 name: "Imitation Learning"
 status: seedling
 added: "2026-07-01"
-sources: [chi2023diffusion, kim2024openvla, tao2024maniskill3, zhao2023learning]
+sources: [chi2023diffusion, ghosh2024octo, kim2024openvla, prasad2024consistency, tao2024maniskill3, zhao2023learning]
 related_concepts: [Behavior Cloning, Diffusion Policy, Vision-Language-Action Model, Reinforcement Learning, Sim-to-Real Transfer]
 related_experiments: []
 tags: [imitation, learning-from-demonstration, policy]

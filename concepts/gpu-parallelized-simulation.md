@@ -3,7 +3,7 @@ kind: concept
 name: "GPU-Parallelized Simulation"
 status: seedling
 added: "2026-07-01"
-sources: [tao2024maniskill3]
+sources: [tao2024maniskill3, zakka2025mujoco]
 related_concepts: ["Parallel Rendering", "Heterogeneous Simulation", "Manipulation Benchmark", "Reinforcement Learning", "On-Policy RL"]
 related_experiments: []
 tags: [simulation, gpu, throughput]

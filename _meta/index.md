@@ -27,8 +27,18 @@ and `/new-experiment`.
 - Can [[Diffusion Policy]] be reproduced on a lightweight sim manipulation
   task within the compute envelope, and how sensitive is it to
   [[Action Chunking]] horizon and [[DDIM]] inference steps?
-- Where does the 16 GB ceiling actually bite for VLAs — is quantized
-  [[Vision-Language-Action Model]] inference / [[LoRA Fine-Tuning]] feasible,
-  or inference-only?
+- Where does the 16 GB ceiling actually bite for VLAs? Partly answered by the
+  2026-08-20 ingest: [[ghosh2024octo|Octo]]-scale (27M/93M) finetunes in ~5 h on one consumer
+  card, while [[black2024pi0|π0]] (3.3B) runs inference in 73 ms on a 4090 but cannot be
+  trained here. Open: where between 93M and 3.3B does finetuning stop fitting?
 - How much does [[GPU-Parallelized Simulation]] (ManiSkill3 / MuJoCo
-  Playground) change what a single-GPU learner can attempt?
+  Playground) change what a single-GPU learner can attempt? Neither paper
+  benchmarks on 16 GB, and MuJoCo Playground reports the bottleneck has already
+  moved from data collection to gradient updates (9-43% of training time is
+  physics+render) — so more parallel envs may not help.
+- Three distinct answers now exist to diffusion's inference cost:
+  [[Diffusion Action Head]] (architectural), [[Consistency Distillation]]
+  (training-time), and [[Flow Matching]] (straighter path). Which wins under a
+  fixed 16 GB budget once *total* cost including training is counted?
+- Is model-based RL ([[World Model]] / [[hafner2023mastering|DreamerV3]]) worth its complexity here, or
+  does cheap GPU-parallel sampling erase its sample-efficiency advantage?

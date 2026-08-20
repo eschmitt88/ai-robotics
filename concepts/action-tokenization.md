@@ -3,7 +3,7 @@ kind: concept
 name: "Action Tokenization"
 status: seedling
 added: "2026-07-01"
-sources: [kim2024openvla]
+sources: [black2024pi0, ghosh2024octo, kim2024openvla]
 related_concepts: [Vision-Language-Action Model, Foundation Models for Robotics, Behavior Cloning]
 related_experiments: []
 tags: [vla, tokenization, action-space]

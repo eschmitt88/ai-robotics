@@ -3,7 +3,7 @@ kind: concept
 name: "Sim-to-Real Transfer"
 status: seedling
 added: "2026-07-01"
-sources: [tao2024maniskill3]
+sources: [tao2024maniskill3, tobin2017domain, zakka2025mujoco]
 related_concepts: ["Domain Randomization", "Digital Twins", "GPU-Parallelized Simulation", "Manipulation Benchmark", "Vision-Language-Action Model"]
 related_experiments: []
 tags: [sim-to-real, deployment, robustness]

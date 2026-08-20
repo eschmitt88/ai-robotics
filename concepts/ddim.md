@@ -3,7 +3,7 @@ kind: concept
 name: "DDIM"
 status: seedling
 added: "2026-07-01"
-sources: [chi2023diffusion]
+sources: [chi2023diffusion, prasad2024consistency]
 related_concepts: [Denoising Diffusion Probabilistic Models, Diffusion Policy, Score Function]
 related_experiments: []
 tags: [diffusion, sampling, inference]

@@ -3,7 +3,7 @@ kind: concept
 name: "FiLM Conditioning"
 status: seedling
 added: "2026-07-01"
-sources: [chi2023diffusion]
+sources: [chi2023diffusion, prasad2024consistency]
 related_concepts: [Diffusion Policy, Denoising Diffusion Probabilistic Models, Fused Vision Encoder]
 related_experiments: []
 tags: [architecture, conditioning, vision]

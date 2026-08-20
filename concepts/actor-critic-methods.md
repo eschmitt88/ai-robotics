@@ -3,7 +3,7 @@ kind: concept
 name: "Actor-Critic Methods"
 status: seedling
 added: "2026-07-01"
-sources: [haarnoja2018soft, schulman2017proximal]
+sources: [haarnoja2018soft, hafner2023mastering, schulman2017proximal]
 related_concepts: ["Soft Actor-Critic", "Proximal Policy Optimization", "Policy Gradient Methods", "Generalized Advantage Estimation", "Reinforcement Learning"]
 related_experiments: []
 tags: [rl, algorithms, actor-critic]
