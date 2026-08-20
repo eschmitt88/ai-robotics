@@ -10,9 +10,9 @@ and `/new-experiment`.
 
 ## Maps of Content
 
-- [[mocs/reinforcement-learning]] — Reinforcement Learning for Control (13 concepts)
-- [[mocs/imitation-and-diffusion-policies]] — Imitation Learning & Diffusion Policies (15 concepts)
-- [[mocs/vision-language-action-models]] — Vision-Language-Action Models (7 concepts)
+- [[mocs/reinforcement-learning]] — Reinforcement Learning for Control (18 concepts)
+- [[mocs/imitation-and-diffusion-policies]] — Imitation Learning & Diffusion Policies (19 concepts)
+- [[mocs/vision-language-action-models]] — Vision-Language-Action Models (11 concepts)
 - [[mocs/simulation-and-sim-to-real]] — Simulation & Sim-to-Real (8 concepts)
 
 ## Active experiments

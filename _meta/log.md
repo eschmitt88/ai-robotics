@@ -25,3 +25,4 @@ skills; read by `/lint`.
 2026-08-20 01:11 ingest prasad2024consistency (Consistency Policy) rel=4 cred=4
 2026-08-20 01:11 concepts seeded: 13 new, 27 existing updated (total 56)
 2026-08-20 01:12 curate 2026-07-01-embodied-ai-landscape.md ingested=6 declined=0 dup=6
+2026-08-20 01:15 promote-moc declined=3 (all sub-themes of active MoCs); updated 4 existing MoCs (+13 concepts)

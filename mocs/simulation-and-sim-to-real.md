@@ -15,9 +15,13 @@ into minutes. That makes the simulator both the training source and the
 evaluation harness — but everything learned in sim is only useful if it survives
 contact with the real world. This theme spans that whole arc: the GPU-parallel
 engine that makes sim-first learning feasible, the benchmark tasks it runs, and
-the techniques for crossing the reality gap. The anchoring paper is
-[[literature/papers/tao2024maniskill3]] (ManiSkill3), whose GPU-parallel
-simulation and rendering is the concrete substrate for every concept here.
+the techniques for crossing the reality gap. Three papers anchor it:
+[[literature/papers/tao2024maniskill3]] (ManiSkill3, SAPIEN/PhysX) and
+[[literature/papers/zakka2025mujoco]] (MuJoCo Playground, MJX/JAX) are the two
+live options for the parallel substrate, and
+[[literature/papers/tobin2017domain]] (Tobin et al., IROS 2017) is the primary
+source for domain randomization, the transfer technique this project can practice
+entirely in simulation.
 
 ## GPU-parallel simulation — the throughput engine
 
@@ -44,13 +48,35 @@ simulation and rendering is the concrete substrate for every concept here.
   robots.
 - [[concepts/domain-randomization]] — randomize appearance and dynamics during
   training so the real world looks like just another training sample; the
-  compute-cheap seminal route to transfer.
+  compute-cheap seminal route to transfer. Tobin's ablations pin down what it
+  actually buys: **texture count dominates** (performance degrades below ~1,000
+  unique texturizations, and matters more than object-position variety in the
+  low-data regime), and robustness is acquired **only along axes you randomize**
+  — dropping distractors from training left object-only error unchanged while
+  quadrupling distractor error.
 - [[concepts/digital-twins]] — high-fidelity replicas for benchmarking transfer
   without touching hardware, a higher-fidelity complement to blanket
   randomization.
+
+## Choosing the substrate
+
+ManiSkill3 and MuJoCo Playground answer the same question with different engines,
+and neither benchmarks on 16 GB, so the choice is genuinely open here. The
+predictive difference is structural: MJX inherits JAX's static-shape requirement,
+so contact cost scales with the number of *possible* contacts rather than active
+ones — which should favor Playground on locomotion and ManiSkill3 (PhysX) on
+cluttered manipulation. Playground also reports that the bottleneck has already
+moved: physics plus rendering account for only 9–43% of PPO training time, the
+rest being gradient updates. On one card that implies more parallel environments
+stop helping well before the simulator saturates.
 
 ## Open thread
 
 Whether domain randomization alone is enough, or whether a digital-twin
 calibration step is worth the added modeling effort, is the transfer question
-this project can only settle once a policy actually reaches hardware.
+this project can only settle once a policy actually reaches hardware. Until then
+the tractable proxy is Tobin's own setup run in reverse: randomize during
+training, evaluate on a *held-out* randomization distribution. That measures the
+transfer mechanism with no robot involved, and GPU-parallel rendering makes the
+texture-count ablation — the paper's most load-bearing and least-cited finding —
+nearly free to reproduce.
