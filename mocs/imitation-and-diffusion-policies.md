@@ -3,7 +3,7 @@ kind: moc
 name: "Imitation Learning & Diffusion Policies"
 status: active
 added: "2026-07-01"
-concepts: [[[concepts/imitation-learning]], [[concepts/behavior-cloning]], [[concepts/compounding-error]], [[concepts/multimodal-action-distribution]], [[concepts/action-chunking]], [[concepts/temporal-ensembling]], [[concepts/conditional-vae-policy]], [[concepts/receding-horizon-control]], [[concepts/diffusion-policy]], [[concepts/denoising-diffusion-probabilistic-models]], [[concepts/ddim]], [[concepts/score-function]], [[concepts/energy-based-model]], [[concepts/film-conditioning]], [[concepts/position-vs-velocity-control]]]
+concepts: [[[concepts/imitation-learning]], [[concepts/behavior-cloning]], [[concepts/compounding-error]], [[concepts/multimodal-action-distribution]], [[concepts/action-chunking]], [[concepts/temporal-ensembling]], [[concepts/conditional-vae-policy]], [[concepts/receding-horizon-control]], [[concepts/diffusion-policy]], [[concepts/denoising-diffusion-probabilistic-models]], [[concepts/ddim]], [[concepts/score-function]], [[concepts/energy-based-model]], [[concepts/film-conditioning]], [[concepts/position-vs-velocity-control]], [[concepts/probability-flow-ode]], [[concepts/diffusion-action-head]], [[concepts/consistency-distillation]], [[concepts/flow-matching]]]
 tags: [moc, imitation-learning, diffusion]
 ---
 
@@ -19,7 +19,9 @@ generative model expressive enough to capture the many valid ways an expert
 might act. The two anchors are complementary reference implementations that both
 fit comfortably on one card: [[literature/papers/zhao2023learning]] (ACT, the
 action-chunking transformer) and [[literature/papers/chi2023diffusion]]
-(Diffusion Policy).
+(Diffusion Policy). A third strand has since become unavoidable: diffusion's
+inference cost, and the three separate architectures the field invented to pay
+it down.
 
 ## The paradigm and its failure mode
 
@@ -58,6 +60,31 @@ action-chunking transformer) and [[literature/papers/chi2023diffusion]]
 - [[concepts/film-conditioning]] — how the CNN variant injects visual
   observations into the denoiser.
 
+## Making generation cheap enough to deploy
+
+Diffusion Policy's 100 DDPM steps cost ~1 s per action on a modest GPU, which
+rules out dynamic tasks and on-board compute. Three structurally different fixes
+now exist, and they are not interchangeable — the cheapest one
+([[concepts/ddim]] step reduction) collapses on hard tasks where the others hold.
+
+- [[concepts/probability-flow-ode]] — the deterministic-transport view that
+  underlies all three fixes, and the source of their shared cost: an ODE
+  formulation samples in fewer steps but sheds some of the SDE's
+  [[concepts/multimodal-action-distribution]].
+- [[concepts/diffusion-action-head]] — the *architectural* fix: run the denoising
+  loop inside a small head on top of one backbone pass, so step count no longer
+  multiplies the expensive part. Free, but requires designing for it up front.
+- [[concepts/consistency-distillation]] — the *training-time* fix: distill a
+  trained teacher into a one-step student. Buys ~10x inference but raises total
+  training cost, since the teacher must be trained first.
+- [[concepts/flow-matching]] — the *objective-level* fix: learn a straighter
+  probability path so ~10 Euler steps suffice by construction, with no
+  distillation stage. The basis of current VLA action decoding.
+
+Anchors: [[literature/papers/prasad2024consistency]] (Consistency Policy) for
+distillation, [[literature/papers/ghosh2024octo]] (Octo) for the action head, and
+[[literature/papers/black2024pi0]] (π0) for flow matching.
+
 ## A design choice that cuts across both
 
 - [[concepts/position-vs-velocity-control]] — whether the action space is target
@@ -69,3 +96,9 @@ action-chunking transformer) and [[literature/papers/chi2023diffusion]]
 Chunking and diffusion attack the same compounding-error problem from different
 angles; whether their gains stack — or whether a chunked diffusion policy is
 just paying twice for one fix — is worth an experiment on the same task.
+
+A second thread, opened by the 2026-08-20 ingest: the three inference fixes above
+are usually compared on *inference latency alone*, which is the metric that
+flatters distillation. Counted end-to-end on one card — teacher training plus
+distillation versus an architecture that never needed either — the ranking may
+invert. None of the three papers reports that total.
