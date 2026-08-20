@@ -3,7 +3,7 @@ kind: concept
 name: "Vision-Language-Action Model"
 status: seedling
 added: "2026-07-01"
-sources: [kim2024openvla]
+sources: [black2024pi0, ghosh2024octo, kim2024openvla]
 related_concepts: [Action Tokenization, Foundation Models for Robotics, LoRA Fine-Tuning, Open X-Embodiment, Behavior Cloning]
 related_experiments: []
 tags: [vla, foundation-models, policy]

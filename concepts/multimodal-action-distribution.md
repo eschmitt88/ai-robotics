@@ -3,7 +3,7 @@ kind: concept
 name: "Multimodal Action Distribution"
 status: seedling
 added: "2026-07-01"
-sources: [chi2023diffusion]
+sources: [black2024pi0, chi2023diffusion, ghosh2024octo, prasad2024consistency]
 related_concepts: [Diffusion Policy, Behavior Cloning, Conditional VAE Policy, Energy-Based Model, Denoising Diffusion Probabilistic Models]
 related_experiments: []
 tags: [imitation, distribution, generative]

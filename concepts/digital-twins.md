@@ -3,7 +3,7 @@ kind: concept
 name: "Digital Twins"
 status: seedling
 added: "2026-07-01"
-sources: [tao2024maniskill3]
+sources: [tao2024maniskill3, tobin2017domain]
 related_concepts: ["Sim-to-Real Transfer", "Domain Randomization", "Manipulation Benchmark", "GPU-Parallelized Simulation"]
 related_experiments: []
 tags: [sim-to-real, evaluation, digital-twin]

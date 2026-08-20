@@ -3,7 +3,7 @@ kind: concept
 name: "Temporal Ensembling"
 status: seedling
 added: "2026-07-01"
-sources: [zhao2023learning]
+sources: [black2024pi0, zhao2023learning]
 related_concepts: [Action Chunking, Compounding Error, Receding Horizon Control, Conditional VAE Policy]
 related_experiments: []
 tags: [imitation, inference, smoothing]

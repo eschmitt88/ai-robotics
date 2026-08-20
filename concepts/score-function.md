@@ -3,7 +3,7 @@ kind: concept
 name: "Score Function"
 status: seedling
 added: "2026-07-01"
-sources: [chi2023diffusion]
+sources: [chi2023diffusion, prasad2024consistency]
 related_concepts: [Denoising Diffusion Probabilistic Models, Energy-Based Model, DDIM, Diffusion Policy]
 related_experiments: []
 tags: [diffusion, theory, gradients]

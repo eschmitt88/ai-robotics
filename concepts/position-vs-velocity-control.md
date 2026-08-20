@@ -3,7 +3,7 @@ kind: concept
 name: "Position vs Velocity Control"
 status: seedling
 added: "2026-07-01"
-sources: [chi2023diffusion]
+sources: [chi2023diffusion, zakka2025mujoco]
 related_concepts: [Diffusion Policy, Receding Horizon Control, Action Chunking, Continuous Control]
 related_experiments: []
 tags: [control, action-space, design-choice]

@@ -3,7 +3,7 @@ kind: concept
 name: "Diffusion Policy"
 status: seedling
 added: "2026-07-01"
-sources: [chi2023diffusion]
+sources: [chi2023diffusion, ghosh2024octo, prasad2024consistency]
 related_concepts: [Denoising Diffusion Probabilistic Models, Multimodal Action Distribution, Action Chunking, Receding Horizon Control, FiLM Conditioning]
 related_experiments: []
 tags: [imitation, diffusion, visuomotor]

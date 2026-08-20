@@ -3,7 +3,7 @@ kind: concept
 name: "Continuous Control"
 status: seedling
 added: "2026-07-01"
-sources: [haarnoja2018soft, schulman2017proximal, tao2024maniskill3]
+sources: [haarnoja2018soft, hafner2023mastering, schulman2017proximal, tao2024maniskill3, zakka2025mujoco]
 related_concepts: ["Reinforcement Learning", "Soft Actor-Critic", "Proximal Policy Optimization", "Manipulation Benchmark"]
 related_experiments: []
 tags: [rl, control, action-space]

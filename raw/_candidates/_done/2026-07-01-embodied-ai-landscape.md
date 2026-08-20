@@ -5,6 +5,7 @@ discovered: 2026-07-01
 source: discover
 n_requested: 12
 n_returned: 12
+curated: 2026-08-20
 ---
 
 Ranked triage across the four sub-themes of the project (1 = VLA foundation
@@ -95,3 +96,39 @@ eye to what a hands-on learner on a single 16 GB GPU can actually run.
 - type: paper
 - summary: Distills a diffusion policy into a consistency model that speeds inference by an order of magnitude while retaining competitive success rates.
 - reason: Directly targets resource-constrained deployment, showing how to get fast policy inference on hardware that cannot run heavy diffusion sampling. (theme 2)
+
+## Curation
+
+Curated 2026-08-20. 12 items: 6 already in the graph from the 2026-07-01
+ingest batch, 6 ingested now. Zero declines — this file was `/discover`
+output that had already been quality-filtered to one theme, and every
+remaining item cleared the bar on-mission and substantive.
+
+1. Diffusion Policy — already in graph → `chi2023diffusion`
+2. OpenVLA — already in graph → `kim2024openvla`
+3. ManiSkill3 — already in graph → `tao2024maniskill3`
+4. Soft Actor-Critic — already in graph → `haarnoja2018soft`
+5. ACT / ALOHA — already in graph → `zhao2023learning`
+6. Proximal Policy Optimization — already in graph → `schulman2017proximal`
+7. Octo — ingested → `ghosh2024octo` (rel=5, cred=5)
+8. DreamerV3 — ingested → `hafner2023mastering` (rel=4, cred=5)
+9. MuJoCo Playground — ingested → `zakka2025mujoco` (rel=5, cred=5)
+10. Domain Randomization — ingested → `tobin2017domain` (rel=4, cred=5)
+11. π0 — ingested → `black2024pi0` (rel=4, cred=4)
+12. Consistency Policy — ingested → `prasad2024consistency` (rel=4, cred=4)
+
+Metadata corrections made during ingest, against the triage entries above:
+
+- **π0** is item 11's "worth studying even though full training exceeds a
+  single 16 GB GPU" — correct on training, but the paper reports **73 ms
+  inference on an RTX 4090**, so running it here is feasible. The triage
+  reason understated its practical value.
+- **DreamerV3** was published in **Nature** (640, 2 April 2025,
+  doi:10.1038/s41586-025-08744-2) as "Mastering diverse control tasks
+  through world models"; the triage listed it as an arXiv preprint.
+- **Domain Randomization** (Tobin et al.) was published at **IROS 2017**;
+  the arXiv comment only says "submitted to".
+- **Octo**, **π0**, and **Consistency Policy** are all peer-reviewed at RSS
+  (2024, 2025, 2024 respectively), not preprints.
+
+13 new concepts seeded; 27 existing concept files gained sources.

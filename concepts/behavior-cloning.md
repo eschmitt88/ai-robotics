@@ -3,7 +3,7 @@ kind: concept
 name: "Behavior Cloning"
 status: seedling
 added: "2026-07-01"
-sources: [chi2023diffusion, kim2024openvla, zhao2023learning]
+sources: [chi2023diffusion, ghosh2024octo, kim2024openvla, zhao2023learning]
 related_concepts: [Imitation Learning, Compounding Error, Action Chunking, Diffusion Policy, Multimodal Action Distribution]
 related_experiments: []
 tags: [imitation, supervised-learning, baseline]

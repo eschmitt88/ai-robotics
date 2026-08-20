@@ -3,7 +3,7 @@ kind: concept
 name: "Domain Randomization"
 status: seedling
 added: "2026-07-01"
-sources: [tao2024maniskill3]
+sources: [tao2024maniskill3, tobin2017domain, zakka2025mujoco]
 related_concepts: ["Sim-to-Real Transfer", "Digital Twins", "Heterogeneous Simulation", "Parallel Rendering"]
 related_experiments: []
 tags: [sim-to-real, robustness, augmentation]

@@ -3,7 +3,7 @@ kind: concept
 name: "Open X-Embodiment"
 status: seedling
 added: "2026-07-01"
-sources: [kim2024openvla]
+sources: [black2024pi0, ghosh2024octo, kim2024openvla]
 related_concepts: [Vision-Language-Action Model, Foundation Models for Robotics, Imitation Learning, Behavior Cloning]
 related_experiments: []
 tags: [dataset, pretraining, multi-embodiment]

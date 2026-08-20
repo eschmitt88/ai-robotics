@@ -3,7 +3,7 @@ kind: concept
 name: "Compounding Error"
 status: seedling
 added: "2026-07-01"
-sources: [zhao2023learning]
+sources: [black2024pi0, zhao2023learning]
 related_concepts: [Behavior Cloning, Action Chunking, Temporal Ensembling, Imitation Learning]
 related_experiments: []
 tags: [imitation, failure-mode, distribution-shift]

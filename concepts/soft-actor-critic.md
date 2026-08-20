@@ -3,7 +3,7 @@ kind: concept
 name: "Soft Actor-Critic"
 status: seedling
 added: "2026-07-01"
-sources: [haarnoja2018soft]
+sources: [haarnoja2018soft, hafner2023mastering, zakka2025mujoco]
 related_concepts: ["Actor-Critic Methods", "Maximum Entropy RL", "Off-Policy RL", "Reparameterization Trick", "Continuous Control"]
 related_experiments: []
 tags: [rl, off-policy, algorithms]

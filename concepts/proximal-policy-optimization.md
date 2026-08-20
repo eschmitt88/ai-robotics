@@ -3,7 +3,7 @@ kind: concept
 name: "Proximal Policy Optimization"
 status: seedling
 added: "2026-07-01"
-sources: [schulman2017proximal]
+sources: [hafner2023mastering, schulman2017proximal, zakka2025mujoco]
 related_concepts: ["Clipped Surrogate Objective", "Generalized Advantage Estimation", "Trust Region Policy Optimization", "On-Policy RL", "Actor-Critic Methods"]
 related_experiments: []
 tags: [rl, on-policy, algorithms]
