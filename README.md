@@ -4,7 +4,7 @@
 vision-language-action policies — studied on a single 16 GB GPU with
 simulation-first, hands-on experiments.**
 
-📂 **[Browse this repo →](https://<owner>.github.io/ai-robotics/)** —
+📂 **[Browse this repo →](https://eschmitt88.github.io/ai-robotics/)** —
 interactive, always-live view of experiments, concepts, literature, and maps of
 content. Served via GitHub Pages from `docs/index.html`; reads the live file
 tree, no build step.
